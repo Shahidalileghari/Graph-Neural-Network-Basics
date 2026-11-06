@@ -110,13 +110,3 @@ This repository provides working foundations for node classification and link pr
 ## Testing status
 
 The dependency-light core is designed for unit testing with pytest. Optional PyG examples require separately installed compatible dependencies and dataset downloads. Do not interpret a successful import or config inspection as proof that training has been executed.
-
-See [docs/EVALUATION.md](docs/EVALUATION.md), [docs/COMMON_PITFALLS.md](docs/COMMON_PITFALLS.md), and [docs/ROADMAP.md](docs/ROADMAP.md).
-
-## GitHub repository description
-
-**Engineering-focused graph neural networks lab: message passing, GCN node classification, link prediction, graph evaluation, reproducible experiments, and PyTorch Geometric examples.**
-
-## License
-
-MIT. See [LICENSE](LICENSE).
