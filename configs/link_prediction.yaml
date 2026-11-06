@@ -1,0 +1,13 @@
+experiment:
+  name: synthetic-link-prediction
+  seed: 42
+dataset:
+  name: synthetic-small-graph
+  protocol: edge-split
+model:
+  name: dot-product-decoder
+  embedding_dim: 32
+training:
+  epochs: 100
+  negative_sampling_ratio: 1.0
+  metrics: [roc_auc, average_precision, hits_at_10]

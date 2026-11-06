@@ -1,0 +1,17 @@
+experiment:
+  name: cora-gcn-baseline
+  seed: 42
+dataset:
+  name: Cora
+  protocol: transductive
+  split: Planetoid public split
+model:
+  name: GCN
+  hidden_channels: 16
+  dropout: 0.5
+training:
+  learning_rate: 0.01
+  weight_decay: 0.0005
+  epochs: 200
+  early_stopping_patience: 30
+  metric: validation_accuracy

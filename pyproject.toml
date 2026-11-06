@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph-neural-networks-engineering"
+version = "0.1.0"
+description = "Practical graph neural network engineering baselines and utilities"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Graph Neural Networks Engineering"}]
+dependencies = ["numpy>=1.24", "PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+torch = ["torch>=2.1"]
+pyg = ["torch>=2.1", "torch-geometric>=2.5", "scikit-learn>=1.3"]
+
+[project.scripts]
+gnn-lab = "gnn_engineering.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
